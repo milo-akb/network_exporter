@@ -118,7 +118,3 @@ scrape_configs:
 docker-compose up -d
 ```
 
-## License
-
-MIT
-
