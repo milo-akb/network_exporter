@@ -101,6 +101,34 @@ docker restart network-exporter
 docker stop network-exporter && docker rm network-exporter
 ```
 
+## Docker Compose
+
+```bash
+docker-compose up -d
+```
+
+## Helm Chart
+
+A Helm chart is available under `helm/network-exporter`.
+
+### Deploy on Kubernetes
+
+Install or upgrade the chart:
+
+```bash
+helm install network-exporter ./helm/network-exporter
+# or
+helm upgrade network-exporter ./helm/network-exporter
+```
+
+Port-forward to view metrics:
+
+```bash
+kubectl port-forward service/network-exporter 8000:8000
+```
+
+To change targets, edit `helm/network-exporter/values.yaml` under `config`.
+
 ## Prometheus Integration
 
 Add to `prometheus.yml`:
@@ -111,10 +139,3 @@ scrape_configs:
     static_configs:
       - targets: ['localhost:8000']
 ```
-
-## Docker Compose
-
-```bash
-docker-compose up -d
-```
-
