@@ -1,0 +1,12 @@
+1) Install the chart:
+   helm install <release-name> ./helm/network-exporter
+
+2) Verify the service:
+   kubectl get service {{ include "network-exporter.fullname" . }}
+
+3) Port-forward to access metrics:
+   kubectl port-forward service/{{ include "network-exporter.fullname" . }} {{ .Values.service.port }}:{{ .Values.service.port }}
+
+4) Open metrics:
+   http://localhost:{{ .Values.service.port }}/metrics
+

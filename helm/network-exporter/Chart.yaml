@@ -1,0 +1,7 @@
+apiVersion: v2
+name: network-exporter
+description: Helm chart for the network exporter Prometheus target
+type: application
+version: 0.1.0
+appVersion: "1.0"
+
