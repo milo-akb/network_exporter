@@ -1,8 +1,0 @@
-prometheus-client
-watchdog
-PyYAML
-pydantic
-requests
-ntplib
-dnspython
-
