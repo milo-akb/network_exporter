@@ -1,0 +1,23 @@
+apiVersion: v2
+name: network-exporter
+description: A Helm chart for network-exporter - Prometheus exporter for network monitoring
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+home: https://github.com/YOUR_USERNAME/network-exporter
+sources:
+  - https://github.com/YOUR_USERNAME/network-exporter
+maintainers:
+  - name: Network Exporter Team
+    email: contact@example.com
+keywords:
+  - prometheus
+  - network
+  - monitoring
+  - exporter
+  - icmp
+  - dns
+  - http
+  - ntp
+icon: https://prometheus.io/assets/favicons/favicon.ico
+
